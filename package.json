@@ -1,6 +1,5 @@
 {
     "name": "pizza-arch-visualizer",
-    "homepage": "https://roshan798.github.io/Pizza-App-Arch",
     "private": true,
     "version": "1.0.0",
     "description": "Interactive architecture visualizer for the pizza-delivery-app microservices ecosystem",
