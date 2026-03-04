@@ -1,0 +1,31 @@
+.wrapper { position: relative; width: 100%; }
+.svg { width: 100%; height: auto; display: block; max-height: 420px; }
+
+.tooltip {
+  position: fixed; z-index: 1000;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 11px;
+  pointer-events: none;
+  max-width: 240px;
+  animation: fadeInUp .15s ease;
+  box-shadow: 0 8px 32px rgba(0,0,0,.5);
+}
+.tooltipTitle {
+  font-family: var(--font-sans);
+  font-weight: 700; font-size: 12px;
+  margin-bottom: 8px;
+}
+.tooltipRow {
+  display: flex; justify-content: space-between; gap: 12px;
+  margin-bottom: 3px;
+}
+.tooltipKey { color: var(--text3); }
+.tooltipVal { color: var(--accent2); font-weight: 700; }
+.tooltipDesc {
+  margin-top: 8px; padding-top: 8px;
+  border-top: 1px solid var(--border);
+  font-size: 10px; color: var(--text2); line-height: 1.6;
+}

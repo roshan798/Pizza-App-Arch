@@ -1,0 +1,79 @@
+.page { display: flex; flex-direction: column; gap: 16px; }
+.p { font-size: 11px; color: var(--text2); line-height: 1.8; margin-bottom: 8px; }
+.code {
+  background: var(--bg3); border: 1px solid var(--border);
+  padding: 1px 6px; border-radius: 3px;
+  font-family: var(--font-mono); font-size: 10px; color: var(--accent2);
+}
+.h3 {
+  font-family: var(--font-sans); font-weight: 700; font-size: 13px;
+  color: var(--text); margin: 16px 0 8px;
+}
+.h3:first-child { margin-top: 0; }
+.pre {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: 6px; padding: 14px 16px;
+  font-size: 10px; line-height: 1.8; color: #a8b8d8;
+  overflow-x: auto; white-space: pre; font-family: var(--font-mono);
+  margin-bottom: 4px;
+}
+
+/* Roles */
+.rolesGrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+.roleCard {
+  border: 1px solid; border-radius: 8px; padding: 14px;
+}
+.roleHeader { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+.roleTitle { font-family: var(--font-sans); font-weight: 800; font-size: 14px; }
+.roleScope { font-size: 9px; opacity: .7; }
+.rolePerms { list-style: none; padding: 0; }
+.rolePerms li {
+  font-size: 10px; color: var(--text2); padding: 2px 0 2px 14px; position: relative; line-height: 1.6;
+}
+.rolePerms li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); }
+
+/* Table */
+.table { width: 100%; border-collapse: collapse; font-size: 11px; }
+.table th {
+  text-align: left; padding: 9px 16px;
+  font-size: 9px; color: var(--text3); font-weight: 400;
+  text-transform: uppercase; letter-spacing: 1px;
+  border-bottom: 1px solid var(--border);
+}
+.tr:hover .tdBold, .tr:hover .tdMuted { background: var(--bg3); }
+.tdBold { padding: 10px 16px; border-bottom: 1px solid rgba(30,34,53,.5); font-weight: 700; }
+.tdMuted { padding: 10px 16px; border-bottom: 1px solid rgba(30,34,53,.5); color: var(--text3); font-size: 10px; }
+
+/* Domains */
+.domainsGrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+.domainCard {
+  background: var(--bg3); border: 1px solid var(--border);
+  border-radius: 8px; padding: 14px;
+}
+.domainName { font-family: var(--font-mono); font-weight: 700; font-size: 11px; }
+
+/* Risks */
+.riskList { display: flex; flex-direction: column; gap: 8px; }
+.riskRow {
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 10px 12px; border-radius: 7px;
+  background: var(--bg3); border: 1px solid var(--border);
+}
+.riskLevel { font-size: 11px; min-width: 80px; flex-shrink: 0; white-space: nowrap; }
+.riskTitle { font-weight: 700; font-size: 11px; font-family: var(--font-sans); color: var(--text); margin-bottom: 3px; }
+.riskText { font-size: 10px; color: var(--text3); line-height: 1.6; }
+
+/* Recs */
+.recGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.recCard {
+  display: flex; gap: 12px; align-items: flex-start;
+  background: var(--bg3); border: 1px solid var(--border);
+  border-radius: 7px; padding: 12px;
+}
+.recIcon { font-size: 20px; flex-shrink: 0; }
+.recTitle { font-weight: 700; font-size: 11px; font-family: var(--font-sans); color: var(--text); margin-bottom: 4px; }
+.recDesc { font-size: 10px; color: var(--text3); line-height: 1.6; }
+
+@media (max-width: 800px) {
+  .rolesGrid, .domainsGrid, .recGrid { grid-template-columns: 1fr; }
+}
